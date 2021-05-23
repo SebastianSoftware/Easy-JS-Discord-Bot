@@ -1,3 +1,4 @@
+// Its recomended to change all the SSEJSDB to your bot name
 //Remember to download discord.js v12 package and use node.js
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -12,9 +13,13 @@ client.on('message', message => {
      }
   if(message.channel.startsWith(prefix + 'help')) {
       const help = new Discord.MessageEmbed()
-      .setColor("Random")
-      .setTitle("Help")
-      .setDescription("This is the help menu for BOT")
+      .setColor("RANDOM")
+      .setTitle("SSEJSDB Help")
+      .setDescription("This is the help menu for SSEJSDB")
+      .addField("Interaction Commands", "Use `" prefix + " help interaction`")
+      .addField("Fun Commands", "Use `" + prefix + " help Fun`")
+      .addField("Moderation Commands", "Use `" + prefix + " help interaction`")
+      .addField(" Commands", "Use `" + prefix + " help interaction`")
       message.channel.send(help)
   }
 })
